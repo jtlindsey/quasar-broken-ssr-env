@@ -12,6 +12,7 @@
  */
 require('dotenv').config()
 const v = process.env.VAL
+if (v !== 'something') throw new Error('Still cant read env in express in production')
 
 module.exports.extendApp = function ({ app, ssr }) {
   /*
